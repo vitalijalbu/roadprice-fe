@@ -20,7 +20,6 @@ const { status, data: posts } = useFetch('https://resthotels.it/api/listings?per
         Loading ...
       </div>
   
-      <!-- Griglia di Prodotti -->
       <div class="grid grid-cols-4 gap-4" v-else>
         <div v-for="post in posts.data" :key="post.id">
           <NuxtLink :to="`/properties/${post.id}`">
