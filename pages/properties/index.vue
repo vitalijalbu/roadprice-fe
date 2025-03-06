@@ -2,7 +2,6 @@
 useHead({
     title: "Ricerca",
 });
-import Filters from '~/shared/components/filters.vue';
 
 
 const { status, data: posts } = useFetch('https://resthotels.it/api/listings?per_page=500', {
@@ -14,7 +13,6 @@ const { status, data: posts } = useFetch('https://resthotels.it/api/listings?per
     <UContainer>
       <!-- Sezione Filtro -->
       <div class="filters">
-        <Filters />
       </div>
   
       <!-- Caricamento -->
