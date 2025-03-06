@@ -13,17 +13,18 @@ const { status, data: post } = useFetch(`https://resthotels.it/api/listings/${ro
 <template>
   <UContainer>
     <div class="grid grid-cols-2 gap-4">
-    <NuxtLink to="/properties">Indietro</NuxtLink>
-    <UButton>Button</UButton>
+    <NuxtLink to="/properties">go bacl</NuxtLink>
     <h1>stai vedendo la proprietà {{ $route.params.slug }}</h1>
-   
+    <h1>{{ post?.data?.title }}</h1>
+        <h3>category:{{ post?.data?.category?.title }}</h3>
+        <p>{{ post?.data?.description }}</p>
+
     <UCard>
       <template #header>
-        <h1>{{ post?.title }}</h1>
       </template>
       <Placeholder class="h-32" />
       <template #footer>
-        <Placeholder class="h-8" />
+        <UButton>Button</UButton>
       </template>
     </UCard>    
   </div>
