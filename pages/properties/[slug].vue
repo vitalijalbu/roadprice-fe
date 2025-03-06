@@ -4,7 +4,7 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 
 
-const { status, data: post } = useFetch(`https://resthotels.it/api/listings/${route.params.slug}`, {
+const { status, data: post } = await useFetch(`https://resthotels.it/api/listings/${route.params.slug}`, {
   lazy: true
 })
 </script>
