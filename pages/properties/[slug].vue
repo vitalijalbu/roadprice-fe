@@ -12,6 +12,10 @@ const { status, data: post } = await useFetch(`https://resthotels.it/api/listing
 
 <template>
   <UContainer>
+          <!-- Caricamento -->
+          <div v-if="status === 'pending'" class="text-center my-4">
+        Loading ...
+      </div>
     <div class="grid grid-cols-2 gap-4">
     <NuxtLink to="/properties">go bacl</NuxtLink>
     <h1>stai vedendo la proprietà {{ $route.params.slug }}</h1>
