@@ -1,8 +1,8 @@
 <template>
-    <UCard>
+    <UCard class="transform transition hover:-translate-y-1 duration-300">
               <template #header>
                 <!-- <h2 class="text-lg font-semibold">{{ post.title }}</h2> -->
-                <img class="w-full rounded-t-sm" src="https://aws-tiqets-cdn.imgix.net/images/content/dd970a799d2d4cad9ab8e7a94daa0fce.png" alt="Sunset in the mountains" />
+                <img class="w-full rounded-t-xl" src="https://aws-tiqets-cdn.imgix.net/images/content/dd970a799d2d4cad9ab8e7a94daa0fce.png" alt="Sunset in the mountains" />
               </template>
                           <!-- <img src="/placeholder.svg" :alt="post.title" class="w-full h-auto object-cover" /> -->
               <template #footer>
@@ -11,7 +11,7 @@
                       <ul class="truncate text-xs uppercase font-medium text-ink-300 tracking-wider m-auto p-0">
                         <li class="inline after:mx-2 after:text-ink-300 last:after:hidden">Parigi</li>                                           
                       </ul>
-                      <a href="/it/biglietti-centro-pompidou-di-parigi-l141843/" class="stretched-click-overlay no-underline outline-none block" target="_blank">
+                      <a href="#" class="stretched-click-overlay no-underline outline-none block" target="_blank">
                         <h4 class="text-heading-xs line-clamp-3 font-bold max-lg:line-clamp-2 my-auto">
                           Centro Pompidou Parigi 
                         </h4>          
