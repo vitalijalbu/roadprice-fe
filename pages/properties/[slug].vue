@@ -28,8 +28,12 @@ const { status, data: post } = await useFetch(`https://resthotels.it/api/listing
         <div>4.5 (5.6K ratings)</div>
       </div>
       <ImageGallery />
-      <div class="flex">
-        <p>{{ post?.data?.description }}</p>   
+      <div class="flex gap-4">
+        <div>
+          <FeatureHighlights class="my-4" />
+          <p>{{ post?.data?.description }}</p>
+        </div>
+        <BookingWidget class="flex-shrink-0 p-4" />
       </div>
   </UContainer>
 </template>
