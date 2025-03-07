@@ -12,25 +12,24 @@ const { status, data: post } = await useFetch(`https://resthotels.it/api/listing
 
 <template>
   <UContainer>
+        <!-- Breadcrumb  -->
+        <BreadCrumb />
           <!-- Caricamento -->
           <div v-if="status === 'pending'" class="text-center my-4">
         Loading ...
       </div>
-    <div class="grid grid-cols-2 gap-4">
-    <NuxtLink to="/properties">go bacl</NuxtLink>
-    <h1>stai vedendo la proprietà {{ $route.params.slug }}</h1>
-    <h1>{{ post?.data?.title }}</h1>
+      <div class="flex">
+        <h1 class="text-2xl">{{ post?.data?.title }}</h1>
+      </div>
+      <div class="flex">
         <h3>category:{{ post?.data?.category?.title }}</h3>
-        <p>{{ post?.data?.description }}</p>
-
-    <UCard>
-      <template #header>
-      </template>
-      <Placeholder class="h-32" />
-      <template #footer>
-        <UButton>Button</UButton>
-      </template>
-    </UCard>    
-  </div>
+        <UIcon name="i-lucide-chevron-left" class="size-5" />
+        <UIcon name="i-kid-star-outlined" class="size-5" />
+        <div>4.5 (5.6K ratings)</div>
+      </div>
+      <ImageGallery />
+      <div class="flex">
+        <p>{{ post?.data?.description }}</p>   
+      </div>
   </UContainer>
 </template>
