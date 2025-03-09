@@ -28,9 +28,9 @@ const { status, data: posts } = useFetch('https://resthotels.it/api/listings?per
 
       <div class="mt-12 grid grid-cols-1 gap-4" v-else>
         <div v-for="post in posts.data" :key="post.id">
-          <NuxtLink :to="`/properties/${post.id}`">
-            <TravelCardNew />
-          </NuxtLink>
+          <!-- <NuxtLink :to="`/properties/${post.id}`"> -->
+            <TravelCardNew :post="post"/>
+          <!-- </NuxtLink> -->
         </div>
       </div>
     </UContainer>
